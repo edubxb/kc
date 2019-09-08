@@ -1,0 +1,82 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: Montserrat;
+  background-color: #EEEEEE;
+}
+
+body {
+  font-size: 75px;
+  font-weight: bold;
+}
+
+.wrapper {
+  background-color: white;
+  width: 560px;
+  margin: auto;
+  margin-top: 20px;
+  border-left: 1px solid #BBBBBB;
+  border-top: 1px solid #BBBBBB;
+  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  padding: 35px 20px;
+  box-shadow: 2px 2px 9px #555555;
+}
+
+#final, #count {
+  display: none;
+}
+
+.banner {
+  text-align: center;
+}
+
+.banner span {
+  clear: both;
+  display: block;
+}
+
+.little {
+  font-size: 36px;
+}
+
+#labels {
+  margin-bottom: 30px;
+}
+
+.banner span {
+  margin: -6px;
+}
+
+#counter {
+  margin: 30px 0;
+}
+
+#labels {
+  font-weight: bold;
+  font-size: 22px;
+  clear: both;
+  float: left;
+}
+
+#days {
+  margin-left: 34px;
+}
+
+#hours {
+  margin-left: 62px;
+}
+
+#minutes {
+ margin-left: 44px;
+}
+
+#seconds {
+ margin-left: 26px;
+}
+
+.cntSeparator { display: none; }
+
+.cntDigit#cnt_2 { margin-left: 8px; }
+.cntDigit#cnt_4 { margin-left: 8px; }
+.cntDigit#cnt_6 { margin-left: 8px; }
