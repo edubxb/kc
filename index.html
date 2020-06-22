@@ -8,11 +8,14 @@
     <script src="js/jquery.countdown.min.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <script>
+        var from = new Date('06/22/2020 08:00:00');
+        var until = new Date('07/20/2020 08:00:00');
         $(function(){
             $('#counter').countdown({
                 image: "img/digits-min.png",
                 format: "dd:hh:mm:ss",
-                endTime: new Date('05/11/2020 09:00:00'),
+                startTime: from,
+                endTime: until,
                 continuous: false
             });
         });
@@ -42,7 +45,7 @@
     </div>
     <div class="wrapper" id="final">
         <div class="banner">
-        <img src="img/crown.png" alt="Crown"/>
+            <img src="img/crown.png" alt="Crown"/>
             <span>KEEP</span>
             <span>CALM</span>
             <span class="little">AND</span>
@@ -55,9 +58,8 @@
         </div>
     </div>
     <script>
-        var until = new Date('05/11/2020 09:00:00');
         var now = new Date();
-        if (now < until) {
+        if (now < until && now > from) {
             $('#count').css({"display" : "block"});
             $('#final').css({"display" : "none"});
         }
