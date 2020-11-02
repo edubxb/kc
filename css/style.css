@@ -1,34 +1,60 @@
 html {
   height: 100%;
   width: 100%;
-  font-family: Montserrat;
   background-color: #EEEEEE;
 }
 
 body {
-  font-size: 75px;
-  font-weight: bold;
-}
-
-.wrapper {
-  background-color: white;
-  width: 560px;
+  transform: rotate(-1deg);
+  background: white;
+  width: 50%;
+  max-width: 550px;
   margin: auto;
-  margin-top: 20px;
-  border-left: 1px solid #BBBBBB;
-  border-top: 1px solid #BBBBBB;
-  border-right: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
+  margin-top: 65px;
   padding: 35px 20px;
-  box-shadow: 2px 2px 9px #555555;
+  position: relative;
+  width: 80%;
+  box-shadow: 0 1px 7px hsla(0, 0%, 0%, 0.2);
+
 }
 
-#final, #count {
+body:after,
+body:before {
+  background: #f8f8f8;
+  content: '';
+  height: 50px;
+  position: absolute;
+  top: -25px;
+  width: 100px;
+  box-shadow: 0 5px 10px -7px hsla(0, 0% ,0%, 0.5);
+}
+
+body:after {
+  left: -50px;
+  transform: rotate(-45deg);
+}
+
+body:before {
+  right: -50px;
+  transform: rotate(45deg);
+}
+
+#final {
   display: none;
+}
+
+.flipdown {
+  margin: auto;
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .banner {
   text-align: center;
+  font-family: Montserrat;
+  font-size: 5em;
+  font-weight: bold;
 }
 
 .banner span {
@@ -37,46 +63,9 @@ body {
 }
 
 .little {
-  font-size: 36px;
-}
-
-#labels {
-  margin-bottom: 30px;
+  font-size: 0.4em;
 }
 
 .banner span {
   margin: -6px;
 }
-
-#counter {
-  margin: 30px 0;
-}
-
-#labels {
-  font-weight: bold;
-  font-size: 22px;
-  clear: both;
-  float: left;
-}
-
-#days {
-  margin-left: 34px;
-}
-
-#hours {
-  margin-left: 62px;
-}
-
-#minutes {
- margin-left: 44px;
-}
-
-#seconds {
- margin-left: 26px;
-}
-
-.cntSeparator { display: none; }
-
-.cntDigit#cnt_2 { margin-left: 8px; }
-.cntDigit#cnt_4 { margin-left: 8px; }
-.cntDigit#cnt_6 { margin-left: 8px; }

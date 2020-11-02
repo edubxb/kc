@@ -4,69 +4,40 @@
     <title>Return Counter</title>
     <meta charset="UTF-8" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <script>
-        var from = new Date('11/02/2020 08:00:00');
-        var until = new Date('01/08/2021 08:00:00');
-        $(function(){
-            $('#counter').countdown({
-                image: "img/digits-min.png",
-                format: "dd:hh:mm:ss",
-                startTime: from,
-                endTime: until,
-                continuous: false
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/flipdown.css" type="text/css"/>
+    <script src="js/flipdown.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="wrapper" id="count">
         <div class="banner">
-        <img src="img/crown.png" alt="Crown"/>
+            <img src="img/crown.png" alt="Crown"/>
             <span>KEEP</span>
             <span>CALM</span>
             <span class="little">AND</span>
             <span>WAIT</span>
         </div>
-        <div id='counter'></div>
-        <div id='labels'>
-            <span id="days">DAYS</span>
-            <span id="hours">HOURS</span>
-            <span id="minutes">MINUTES</span>
-            <span id="seconds">SECONDS</span>
-        </div>
+        <div id="flipdown" class="flipdown"></div>
         <div class="banner">
             <span class="little">FOR</span>
             <span>EDU'S</span>
             <span>RETURN</span>
         </div>
     </div>
-    <div class="wrapper" id="final">
-        <div class="banner">
-            <img src="img/crown.png" alt="Crown"/>
-            <span>KEEP</span>
-            <span>CALM</span>
-            <span class="little">AND</span>
-            <span>SEE</span>
-        </div>
-        <div class="banner">
-            <span>EDU</span>
-            <span class="little">IS</span>
-            <span>HERE</span>
-        </div>
-    </div>
-    <script>
-        var now = new Date();
-        if (now < until && now > from) {
-            $('#count').css({"display" : "block"});
-            $('#final').css({"display" : "none"});
-        }
-        else {
-            $('#count').css({"display" : "none"});
-            $('#final').css({"display" : "block"});
-        }
-    </script>
-</body>
+    <!-- <div class="wrapper" id="final"> -->
+    <!--     <div class="banner"> -->
+    <!--         <img src="img/crown.png" alt="Crown"/> -->
+    <!--         <span>KEEP</span> -->
+    <!--         <span>CALM</span> -->
+    <!--         <span class="little">AND</span> -->
+    <!--         <span>SEE</span> -->
+    <!--     </div> -->
+    <!--     <div class="banner"> -->
+    <!--         <span>EDU</span> -->
+    <!--         <span class="little">IS</span> -->
+    <!--         <span>HERE</span> -->
+    <!--     </div> -->
+    <!-- </div> -->
+   <!-- </body> -->
 </html>
