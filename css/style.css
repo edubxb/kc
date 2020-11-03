@@ -10,7 +10,7 @@ body {
   width: 50%;
   max-width: 550px;
   margin: auto;
-  margin-top: 65px;
+  margin-top: 75px;
   padding: 35px 20px;
   position: relative;
   width: 80%;
@@ -39,10 +39,6 @@ body:before {
   transform: rotate(45deg);
 }
 
-#final {
-  display: none;
-}
-
 .flipdown {
   margin: auto;
   width: 90%;
@@ -60,12 +56,17 @@ body:before {
 .banner span {
   clear: both;
   display: block;
+  margin: -6px;
 }
 
 .little {
   font-size: 0.4em;
 }
 
-.banner span {
-  margin: -6px;
+.here {
 }
+
+.away {
+  display: none;
+}
+
