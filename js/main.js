@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    var startDate = new Date("Nov 2, 2020");
-    var returnDate = new Date("Jan 10, 2021");
+    var startDate = new Date("Nov 2, 2020 00:00");
+    var returnDate = new Date("Jan 10, 2021 08:00");
 
     if (startDate <= Date.now()) {
         var flipdown = new FlipDown(
