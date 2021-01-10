@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (startDate <= Date.now()) {
         var flipdown = new FlipDown(
-            returnDate.getTime() / 1000 + 86400 * 2,
+            returnDate.getTime() / 1000 + 86400,
             { theme: "dark" }
         )
         .start()
