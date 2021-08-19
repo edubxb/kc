@@ -1,49 +1,58 @@
-document.addEventListener('DOMContentLoaded', () => {
-    var startDate = new Date("Aug 23, 2021 00:00");
-    var returnDate = new Date("Sep 13, 2021 08:00");
-
-    if (startDate <= Date.now() && returnDate >= Date.now()) {
-        Array.prototype.map.call(document.getElementsByClassName('here'),
-            function(element) {
-                element.style.display = 'none';
-            }
-        );
-        Array.prototype.map.call(document.getElementsByClassName('away'),
-            function(element) {
-                element.style.display = 'block';
-            }
-        );
-
-        console.log('The countdown has started!');
-        var flipdown = new FlipDown(
-            returnDate.getTime() / 1000,
-            { theme: "dark" }
-        )
-        .start()
-        .ifEnded(() => {
-            console.log('The countdown has ended!');
-            Array.prototype.map.call(document.getElementsByClassName('here'),
-                function(element) {
-                element.style.display = 'block';
-                }
-            );
-            Array.prototype.map.call(document.getElementsByClassName('away'),
-                function(element) {
-                element.style.display = 'none';
-                }
-            );
-        });
+function isEduHere(response) {
+    let here;
+    let away;
+    if (response) {
+       here = 'block'
+       away = 'none'
     }
     else {
-        Array.prototype.map.call(document.getElementsByClassName('here'),
-            function(element) {
-                element.style.display = 'block';
-            }
-        );
-        Array.prototype.map.call(document.getElementsByClassName('away'),
-            function(element) {
-                element.style.display = 'none';
-            }
-        );
+       here = 'none'
+       away = 'block'
+    };
+    Array.prototype.map.call(document.getElementsByClassName('here'),
+        function(element) {
+            element.style.display = here;
+        }
+    );
+    Array.prototype.map.call(document.getElementsByClassName('away'),
+        function(element) {
+            element.style.display = away;
+        }
+    );
+}
+
+function startCountdown(returnDate) {
+    isEduHere(false);
+    console.log('Countdown started!');
+    let flipdown = new FlipDown(
+        returnDate.getTime() / 1000,
+        { theme: "dark" }
+    )
+    .start()
+    .ifEnded(() => {
+        console.log('Countdown ended!');
+        isEduHere(true);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    let startDate = new Date("Aug 23, 2021 00:00");
+    let returnDate = new Date("Sep 13, 2021 08:00");
+
+    currentDate = new Date();
+    isEduHere(true);
+    if (startDate <= currentDate && returnDate >= currentDate) {
+        startCountdown(returnDate);
+    }
+    else {
+        if (startDate.getTime() > currentDate.getTime()) {
+            timeout = (startDate.getTime() - currentDate.getTime())
+            setTimeout(
+                startCountdown,
+                timeout,
+                returnDate
+            );
+            console.log(`Countdown scheduled to start in ${timeout / 1000} seconds!`);
+        }
     };
 });
