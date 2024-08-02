@@ -36,8 +36,8 @@ function startCountdown(returnDate) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    let startDate = new Date("Jul 07, 2023 15:00");
-    let returnDate = new Date("Jul 24, 2023 08:00");
+    let startDate = new Date("Aug 09, 2024 15:00");
+    let returnDate = new Date("Sep 09, 2024 00:00");
 
     currentDate = new Date();
     isEduHere(true);
