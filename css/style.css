@@ -69,3 +69,8 @@ body:before {
 .away {
   display: none;
 }
+
+.rotor-group::after, 
+.rotor-group::before {
+  display: none
+}
